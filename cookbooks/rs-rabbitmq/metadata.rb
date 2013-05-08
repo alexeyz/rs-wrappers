@@ -6,7 +6,7 @@ description      'Installs/Configures rs-rabbitmq'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
-depends "rabbitmq", ">= 1.8.1"
+depends "rabbitmq", ">= 3.0.4"
 
 recipe            "rs-rabbitmq::default", "Install and configure RS-RabbitMQ"
 #recipe            "rs-rabbitmq::cluster", "Set up RabbitMQ clustering."

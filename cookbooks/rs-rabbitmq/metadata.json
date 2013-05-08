@@ -8,7 +8,7 @@
   "platforms": {
   },
   "dependencies": {
-    "rabbitmq": ">= 1.8.1"
+    "rabbitmq": ">= 3.0.4"
   },
   "recommendations": {
   },
@@ -21,6 +21,79 @@
   "replacing": {
   },
   "attributes": {
+    "rs-rabbitmq/logdir": {
+      "display_name": "RabbitMQ log directory",
+      "description": "Path to the directory for log files.",
+      "default": "/var/log/rabbitmq",
+      "recipes": [
+        "rs-rabbitmq::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional"
+    },
+    "rs-rabbitmq/mnesiadir": {
+      "display_name": "RabbitMQ Mnesia database directory",
+      "description": "Path to the directory for Mnesia database files.",
+      "default": "/mnt/mnesia",
+      "recipes": [
+        "rs-rabbitmq::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional"
+    },
+    "rs-rabbitmq/cluster_cookie": {
+      "display_name": "RabbitMQ Erlang cookie",
+      "description": "Access cookie for clustering nodes.  There is no default.",
+      "recipes": [
+        "rs-rabbitmq::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "type": "string",
+      "required": "optional"
+    },
+    "rs-rabbitmq/enabled_plugins": {
+      "display_name": "Enabled plugins",
+      "description": "List all plugins that will be activated for RabbitMQ",
+      "default": [
+
+      ],
+      "type": "array",
+      "recipes": [
+        "rs-rabbitmq::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "required": "optional"
+    },
+    "rs-rabbitmq/disabled_plugins": {
+      "display_name": "Disabled plugins",
+      "description": "List all plugins that will be deactivated for RabbitMQ",
+      "default": [
+
+      ],
+      "type": "array",
+      "recipes": [
+        "rs-rabbitmq::default"
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "required": "optional"
+    }
   },
   "groupings": {
   },
