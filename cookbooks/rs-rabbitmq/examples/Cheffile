@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'sys',
+   :git => 'https://github.com/rightscale/rightscale_cookbooks.git',
+   :path => 'cookbooks/sys',
+   :ref => '0158a9ea18c51d0e0d9754879ac98ab783c13ace'
+
+cookbook 'apt',
+   :git => 'https://github.com/rightscale/cookbooks.git',
+   :path => 'cookbooks/apt',
+   :ref => '44a0442aea61a29c92c8ef3fe4a5385f61264456'
+
+cookbook 'yum',
+   :git => 'https://github.com/rightscale/cookbooks.git',
+   :path => 'cookbooks/yum',
+   :ref => '44a0442aea61a29c92c8ef3fe4a5385f61264456'
+
+cookbook 'git',
+   :git => 'https://github.com/rightscale/cookbooks.git',
+   :path => 'cookbooks/git',
+   :ref => '44a0442aea61a29c92c8ef3fe4a5385f61264456'
+
+
+cookbook 'rightscale',
+   :git => 'https://github.com/rightscale/rightscale_cookbooks.git',
+   :path => 'cookbooks/rightscale',
+   :ref => '0158a9ea18c51d0e0d9754879ac98ab783c13ace'
+
+cookbook 'block_device',
+   :git => 'https://github.com/rightscale/rightscale_cookbooks',
+   :path => 'cookbooks/block_device',
+   :ref => '0158a9ea18c51d0e0d9754879ac98ab783c13ace'
+
+cookbook 'rabbitmq',
+   :git => 'https://github.com/opscode-cookbooks/rabbitmq.git',
+   :ref => 'master'
+
+cookbook 'rs-rabbitmq',
+   :git => 'https://github.com/alexeyz/rs-wrappers.git',
+   :path => 'cookbooks/rs-rabbitmq',
+   :ref => 'master'
