@@ -9,7 +9,7 @@ set['rabbitmq']['mnesiadir'] = nil
 set['rabbitmq']['service_name'] = 'rabbitmq-server'
 
 # RabbitMQ version to install for "redhat", "centos", "scientific", and "amazon".
-set['rabbitmq']['version'] = '3.1'
+set['rabbitmq']['version'] = '3.1.0'
 # Override this if you have a yum repo with rabbitmq available.
 if node[:platform] == 'centos'
   set['rabbitmq']['use_yum'] = false
