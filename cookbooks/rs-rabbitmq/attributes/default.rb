@@ -16,7 +16,7 @@ if node[:platform] == 'centos'
 end
 # Override this if you do not want to use an apt repo
 if node[:platform] == 'ubuntu''
-  set['rabbitmq']['use_apt'] = true
+  set['rabbitmq']['use_apt'] = false
 end
 # The distro versions may be more stable and have back-ported patches
 set['rabbitmq']['use_distro_version'] = false
